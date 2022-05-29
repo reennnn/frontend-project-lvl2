@@ -1,0 +1,37 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "[![Actions Status](https://github.com/reennnn/frontend-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/reennnn/frontend-project-lvl2/actions)",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reennnn/frontend-project-lvl2.git"
+  },
+  "author": "Rinat Bashirov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reennnn/frontend-project-lvl2/issues"
+  },
+  "bin": {
+    "gendiff": "bin/gendiff.js"
+  },
+  "type": "module",
+  "homepage": "https://github.com/reennnn/frontend-project-lvl2#readme",
+  "devDependencies": {
+    "@jest/globals": "^28.1.0",
+    "eslint": "^8.16.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^26.4.2",
+    "jest": "^28.1.0",
+    "jest-cli": "^28.1.0"
+  },
+  "dependencies": {
+    "commander": "^9.3.0",
+    "js-yaml": "^4.1.0",
+    "lodash": "^4.17.21"
+  }
+}
