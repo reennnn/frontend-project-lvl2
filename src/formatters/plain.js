@@ -1,63 +1,45 @@
+import path from 'path';
 import {
-    getKey, getActionType, getValue, getRemovedValue,
-  } from '../compare-data.js';
-  
-  const setGap = (depth, spaceCount = 4) => ' '.repeat(spaceCount * depth - 2); // prefix + indent
-  
-  const formatObjectToString = (obj, depth, depthStep) => {
-    const result = Object.entries(obj).map(([k, v]) => {
-      if (typeof v === 'object') {
-        return `${setGap(depth + depthStep)}  ${k}: ${formatObjectToString(v, depth + depthStep, depthStep)}`;
-      }
-      return `${setGap(depth + depthStep)}  ${k}: ${v}`;
-    });
-  
-    return [
-      '{',
-      result.join('\n'),
-      `${setGap(depth + depthStep / 2)}}`,
-    ].join('\n');
-  };
-  
-  const formatValueToString = (prefix, key, value, depth, depthStep) => {
-    if (typeof value === 'object' && !getActionType(value) && value !== null) {
-      return `${setGap(depth)}${prefix} ${key}: ${formatObjectToString(value, depth, depthStep)}`;
+  getActionType, getKey, getRemovedValue, getValue,
+} from '../compare-data.js';
+
+const resolveItemType = (item) => {
+  if (item === null) {
+    return item;
+  }
+  switch (typeof item) {
+    case 'string':
+      return `'${item}'`;
+    case 'object':
+      return '[complex value]';
+    default:
+      return item;
+  }
+};
+
+const formatDataInPlain = (data) => {
+  const iter = (node, ancestry) => node.flatMap((item) => {
+    const key = getKey(item);
+    const value = getValue(item);
+
+    const newAncestry = path.join(ancestry, `${key}`).split('/').join('.');
+
+    switch (getActionType(item)) {
+      case 'added':
+        return `Property '${newAncestry}' was added with value: ${resolveItemType(value)}`;
+      case 'removed':
+        return `Property '${newAncestry}' was removed`;
+      case 'updated':
+        return `Property '${newAncestry}' was updated. From ${resolveItemType(getRemovedValue(item))} to ${resolveItemType(value)}`;
+      case 'compareChildren':
+        return iter(value, newAncestry);
+      default:
+        return '';
     }
-    return `${setGap(depth)}${prefix} ${key}: ${value}`;
-  };
-  
-  const formatInStylish = (data) => {
-    const depthStep = 1;
-    const iter = (tree, depth) => tree.map((item) => {
-      const key = getKey(item);
-      const value = getValue(item);
-  
-      switch (getActionType(item)) {
-        case 'added':
-          return formatValueToString('+', key, value, depth, depthStep);
-        case 'removed':
-          return formatValueToString('-', key, value, depth, depthStep);
-        case 'updated':
-          return `${formatValueToString('-', key, getRemovedValue(item), depth, depthStep)}\n${formatValueToString('+', key, value, depth, depthStep)}`;
-        case 'compareChildren':
-          return formatValueToString(' ', key, [
-            '{',
-            iter(value, depth + depthStep).join('\n'),
-            `${setGap(depth + depthStep / 2)}}`,
-          ].join('\n'), depth, depthStep);
-        default:
-          return formatValueToString(' ', key, value, depth, depthStep);
-      }
-    });
-  
-    const result = [
-      '{',
-      iter(data, depthStep).join('\n'),
-      '}',
-    ];
-  
-    return result.join('\n');
-  };
-  
-  export default formatInStylish;
-  
+  });
+
+  const result = iter(data, '');
+  return result.filter((item) => item !== '').join('\n');
+};
+
+export default formatDataInPlain;
