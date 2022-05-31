@@ -14,3 +14,5 @@ Non-flat JSON and YAML stylish format compare: <a href="https://asciinema.org/a/
 
 Plain format compare: <a href="https://asciinema.org/a/Qu5TLTrxP9DhpYxGcdOVUFaWe" target="_blank"><img src="https://asciinema.org/a/Qu5TLTrxP9DhpYxGcdOVUFaWe.svg" /></a>
 
+JSON format compare: <a href="https://asciinema.org/a/aXBcfj2trEgDC8tFOkEOBq28Q" target="_blank"><img src="https://asciinema.org/a/aXBcfj2trEgDC8tFOkEOBq28Q.svg" /></a>
+
