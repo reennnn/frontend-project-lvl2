@@ -5,6 +5,9 @@
 
 <a href="https://codeclimate.com/github/reennnn/frontend-project-lvl2/test_coverage"><img src="https://api.codeclimate.com/v1/badges/b1f428dd41488cc96b19/test_coverage" /></a>
 
+### This program can help you to find differences in JSON and YAML files
+
+#### How does it work:
 Flat JSON stylish format compare: <a href="https://asciinema.org/a/yMYhxTo67hI1FrVAZMbGm0wCb" target="_blank"><img src="https://asciinema.org/a/yMYhxTo67hI1FrVAZMbGm0wCb.svg" /></a>
 
 Flat YAML stylish format compare: <a href="https://asciinema.org/a/bED2Gx77bXr3wPzirJotFpyRc" target="_blank"><img src="https://asciinema.org/a/bED2Gx77bXr3wPzirJotFpyRc.svg" /></a>
