@@ -7,7 +7,7 @@
 
 ### This program can help you to find differences in JSON and YAML files
 
-#### How does it work:
+### How does it work:
 Flat JSON stylish format compare: <a href="https://asciinema.org/a/yMYhxTo67hI1FrVAZMbGm0wCb" target="_blank"><img src="https://asciinema.org/a/yMYhxTo67hI1FrVAZMbGm0wCb.svg" /></a>
 
 Flat YAML stylish format compare: <a href="https://asciinema.org/a/bED2Gx77bXr3wPzirJotFpyRc" target="_blank"><img src="https://asciinema.org/a/bED2Gx77bXr3wPzirJotFpyRc.svg" /></a>
