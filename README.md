@@ -7,7 +7,7 @@
 
 [![Actions](https://github.com/reennnn/frontend-project-lvl2/actions/workflows/actions.yml/badge.svg)](https://github.com/reennnn/frontend-project-lvl2/actions/workflows/actions.yml)
 
-### This program can help you to find differences in JSON and YAML files
+### Compares two configuration files and shows a difference
 
 ### How does it work:
 Flat JSON stylish format compare: <a href="https://asciinema.org/a/yMYhxTo67hI1FrVAZMbGm0wCb" target="_blank"><img src="https://asciinema.org/a/yMYhxTo67hI1FrVAZMbGm0wCb.svg" /></a>
