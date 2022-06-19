@@ -1,10 +1,7 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/reennnn/frontend-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/reennnn/frontend-project-lvl2/actions)
-
 <a href="https://codeclimate.com/github/reennnn/frontend-project-lvl2/maintainability"><img src="https://api.codeclimate.com/v1/badges/b1f428dd41488cc96b19/maintainability" /></a>
-
 <a href="https://codeclimate.com/github/reennnn/frontend-project-lvl2/test_coverage"><img src="https://api.codeclimate.com/v1/badges/b1f428dd41488cc96b19/test_coverage" /></a>
-
 [![Actions](https://github.com/reennnn/frontend-project-lvl2/actions/workflows/actions.yml/badge.svg)](https://github.com/reennnn/frontend-project-lvl2/actions/workflows/actions.yml)
 
 ### Compares two configuration files and shows a difference
