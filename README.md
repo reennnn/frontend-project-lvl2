@@ -8,7 +8,9 @@
 
 ### Install:
 `git clone https://github.com/reennnn/frontend-project-lvl2.git
+
 make install
+
 gendiff -h`
 
 ### How does it work:
