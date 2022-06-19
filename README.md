@@ -7,11 +7,10 @@
 ### Compares two configuration files and shows a difference
 
 ### Install:
-`
  - git clone https://github.com/reennnn/frontend-project-lvl2.git
  - make install
  - gendiff -h
-`
+
 
 ### How does it work:
 Flat JSON stylish format compare: <a href="https://asciinema.org/a/yMYhxTo67hI1FrVAZMbGm0wCb" target="_blank"><img src="https://asciinema.org/a/yMYhxTo67hI1FrVAZMbGm0wCb.svg" /></a>
@@ -23,4 +22,3 @@ Non-flat JSON and YAML stylish format compare: <a href="https://asciinema.org/a/
 Plain format compare: <a href="https://asciinema.org/a/Qu5TLTrxP9DhpYxGcdOVUFaWe" target="_blank"><img src="https://asciinema.org/a/Qu5TLTrxP9DhpYxGcdOVUFaWe.svg" /></a>
 
 JSON format compare: <a href="https://asciinema.org/a/aXBcfj2trEgDC8tFOkEOBq28Q" target="_blank"><img src="https://asciinema.org/a/aXBcfj2trEgDC8tFOkEOBq28Q.svg" /></a>
-
