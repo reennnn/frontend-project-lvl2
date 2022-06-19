@@ -1,4 +1,4 @@
-const getStylishFormatMockData = () => `{
+const getStylishFormatData = () => `{
     common: {
       + follow: false
         setting1: Value 1
@@ -43,4 +43,4 @@ const getStylishFormatMockData = () => `{
     }
 }`;
 
-export default getStylishFormatMockData;
+export default getStylishFormatData;
