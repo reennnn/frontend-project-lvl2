@@ -8,7 +8,7 @@ const parseData = (data, type) => {
     case 'json':
       return JSON.parse(data);
     default:
-      throw new Error(`Unknown file type: ${type}. Please use json or yaml`);
+      throw new Error(/ENOENT/);
   }
 };
 
