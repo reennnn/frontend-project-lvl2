@@ -6,8 +6,8 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
-      - name: run npm
-        run: npm i
+      - name: install deps
+        run: make install
       - name: linter check
         run: make lint
       - name: Test and publish code covreage
