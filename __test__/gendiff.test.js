@@ -36,7 +36,7 @@ test('file does not exist', () => {
 });
 
 test('wrong file type', () => {
-  const filepath1 = getFixturePath('file1.yml');
-  const filepath2 = getFixturePath('file1.txt');
-  expect(() => genDiff(filepath1, filepath2)).toThrow(/ENOENT/);
+  const filepath1 = getFixturePath('file1.yaml');
+  const filepath2 = getFixturePath('wrongfiletype.txt');
+  expect(() => genDiff(filepath1, filepath2)).toThrow(/Wrong filetype/);
 });
