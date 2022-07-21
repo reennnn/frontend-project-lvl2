@@ -2,7 +2,7 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "description": "Comparing JSON and YAML files. Hexlet frontend project lvl2",
-  "main": "index.js",
+  "main": "./src/gendiff.js",
   "scripts": {
     "test": "jest"
   },
