@@ -1,9 +1,9 @@
 import _ from 'lodash';
 
 const getComparedData = (data1, data2) => {
-  const sortedAllKeysArray = _.sortBy(_.uniq(Object.keys({ ...data1, ...data2 })));
+  const sortedAllKeys = _.sortBy(_.uniq(Object.keys({ ...data1, ...data2 })));
 
-  return sortedAllKeysArray.map((key) => {
+  return sortedAllKeys.map((key) => {
     const value1 = data1[key];
     const value2 = data2[key];
 
