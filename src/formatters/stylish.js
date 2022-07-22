@@ -5,11 +5,11 @@ import {
 const setGap = (depth, spaceCount = 4) => ' '.repeat(spaceCount * depth - 2); // prefix + indent
 
 const formatObjectToString = (obj, depth, depthStep) => {
-  const result = Object.entries(obj).map(([k, v]) => {
-    if (typeof v === 'object') {
-      return `${setGap(depth + depthStep)}  ${k}: ${formatObjectToString(v, depth + depthStep, depthStep)}`;
+  const result = Object.entries(obj).map(([key, value]) => {
+    if (typeof value === 'object') {
+      return `${setGap(depth + depthStep)}  ${key}: ${formatObjectToString(value, depth + depthStep, depthStep)}`;
     }
-    return `${setGap(depth + depthStep)}  ${k}: ${v}`;
+    return `${setGap(depth + depthStep)}  ${key}: ${value}`;
   });
 
   return [
